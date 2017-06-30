@@ -59,6 +59,9 @@ open class CircularProgressView: DeterminateAnimation {
         let radius = (rect.width / 2) * 0.75
         let strokeScalingFactor = CGFloat(0.05)
         
+        backgroundCircle.contentsScale = NSScreen.main()?.backingScaleFactor ?? 2
+        progressLayer.contentsScale = NSScreen.main()?.backingScaleFactor ?? 2
+        percentLabelLayer.contentsScale = NSScreen.main()?.backingScaleFactor ?? 2
 
         // Add background Circle
         do {
